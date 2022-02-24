@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch SpringbootApplication",
+            "request": "launch",
+            "mainClass": "com.tutorial.crud.SpringbootApplication",
+            "projectName": "springboot"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"

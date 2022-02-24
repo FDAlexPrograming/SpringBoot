@@ -1,16 +1,16 @@
-package com.example.springboot.Controller;
+package com.tutorial.crud.Controller;
 
 import java.util.List;
 
-import com.example.springboot.dto.Mensaje;
-import com.example.springboot.entity.AboutMy;
-import com.example.springboot.servicios.AboutService;
-
+import com.tutorial.crud.dto.Mensaje;
+import com.tutorial.crud.entity.AboutMy;
+import com.tutorial.crud.servicios.AboutService;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
+
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -18,14 +18,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 
 @RestController
-@RequestMapping("/about")
-@CrossOrigin(origins = "*")
+@RequestMapping("/api")
+
 public class AboutController {
 
     @Autowired
     AboutService aboutService;
 
-    @RequestMapping("")
+    @RequestMapping("about")
     public ResponseEntity<List<AboutMy>> getAll() {
         List<AboutMy> abouts = aboutService.getAll();
         return new ResponseEntity<List<AboutMy>>(abouts,HttpStatus.OK);
@@ -56,16 +56,19 @@ public class AboutController {
         }
     }
 
-    @RequestMapping("/delete/{id}")
-    public ResponseEntity<Mensaje> delete(@PathVariable("id") int id) {
-        if (aboutService.existsById(id)) {
+    @DeleteMapping ("/about/delete/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") int id) {
+        if(aboutService.existsById(id)) {
             aboutService.delete(id);
             Mensaje mensaje = new Mensaje("Se elimino correctamente");
             return new ResponseEntity<Mensaje>(mensaje,HttpStatus.OK);
-        } else {
-            Mensaje mensaje = new Mensaje("No se encontro el id");
+        }else{
+            Mensaje mensaje = new Mensaje("No existe el id");
             return new ResponseEntity<Mensaje>(mensaje,HttpStatus.NOT_FOUND);
         }
+
+          
+       
     }
 
 }

@@ -1,4 +1,4 @@
-package com.example.springboot.dto;
+package com.tutorial.crud.dto;
 
 public class Mensaje {
     private String mensaje;

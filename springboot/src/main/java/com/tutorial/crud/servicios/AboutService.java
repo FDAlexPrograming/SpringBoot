@@ -1,10 +1,10 @@
-package com.example.springboot.servicios;
+package com.tutorial.crud.servicios;
 
 import java.util.List;
 import java.util.Optional;
 
-import com.example.springboot.entity.AboutMy;
-import com.example.springboot.repositorio.AboutRepository;
+import com.tutorial.crud.entity.AboutMy;
+import com.tutorial.crud.repositorio.AboutRepository;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

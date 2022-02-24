@@ -1,11 +1,11 @@
-package com.example.springboot.repositorio;
+package com.tutorial.crud.repositorio;
 
 
 
 
 import java.util.Optional;
 
-import com.example.springboot.entity.AboutMy;
+import com.tutorial.crud.entity.AboutMy;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

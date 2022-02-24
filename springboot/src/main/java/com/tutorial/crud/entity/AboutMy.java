@@ -1,5 +1,4 @@
-package com.example.springboot.entity;
-
+package com.tutorial.crud.entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -9,7 +8,7 @@ import javax.persistence.Id;
 @Entity
 public class AboutMy {
     @Id 
-    @GeneratedValue (strategy = GenerationType.AUTO)
+    @GeneratedValue (strategy = GenerationType.IDENTITY)
     private int id;
     private String img;
     private String nombre;
