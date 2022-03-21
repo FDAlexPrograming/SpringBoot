@@ -1,6 +1,7 @@
 package com.tutorial.crud.security.entity;
 
 import javax.persistence.*;
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import java.util.HashSet;
 import java.util.Set;
@@ -17,8 +18,10 @@ public class Usuario {
     private String nombreUsuario;
     @NotNull
     private String email;
+    @NotBlank
     @NotNull
     private String password;
+ 
     @NotNull
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(name = "usuario_rol", joinColumns = @JoinColumn(name = "usuario_id"),

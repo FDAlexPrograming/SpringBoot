@@ -13,7 +13,7 @@ public class NuevoUsuario {
     @Email
     private String email;
     @NotBlank
-    private String password;
+    private String passwordRegistro;
     private Set<String> roles = new HashSet<>();
 
     public String getNombre() {
@@ -41,11 +41,11 @@ public class NuevoUsuario {
     }
 
     public String getPassword() {
-        return password;
+        return passwordRegistro;
     }
 
     public void setPassword(String password) {
-        this.password = password;
+        this.passwordRegistro = password;
     }
 
     public Set<String> getRoles() {
