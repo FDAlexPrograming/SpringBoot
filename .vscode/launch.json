@@ -9,6 +9,13 @@
             "name": "Launch SpringbootApplication",
             "request": "launch",
             "mainClass": "com.tutorial.crud.SpringbootApplication",
+            "projectName": "Splingboot"
+        },
+        {
+            "type": "java",
+            "name": "Launch SpringbootApplication",
+            "request": "launch",
+            "mainClass": "com.tutorial.crud.SpringbootApplication",
             "projectName": "springboot"
         },
         {

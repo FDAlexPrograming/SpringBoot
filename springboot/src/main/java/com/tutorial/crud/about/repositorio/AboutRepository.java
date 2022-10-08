@@ -1,11 +1,11 @@
-package com.tutorial.crud.repositorio;
+package com.tutorial.crud.about.repositorio;
 
 
 
 
 import java.util.Optional;
 
-import com.tutorial.crud.entity.AboutMy;
+import com.tutorial.crud.about.entity.AboutMy;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
